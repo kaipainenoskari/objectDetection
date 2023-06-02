@@ -5,7 +5,7 @@ from tracker import EuclideanDistTracker
 
 tracker = EuclideanDistTracker()
 
-cap = cv2.VideoCapture("training_videos/highway3.mp4")
+cap = cv2.VideoCapture("training_videos/highway.mp4")
 #cap = cv2.VideoCapture(0)
 
 object_detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=40)
