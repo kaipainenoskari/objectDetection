@@ -26,4 +26,3 @@ class FaceLandmarks:
                 y = int(pt1.y * height)
                 facelandmarks.append([x, y])
         return np.array(facelandmarks, np.int32)
-    
