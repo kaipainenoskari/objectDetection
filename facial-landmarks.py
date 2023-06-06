@@ -18,13 +18,14 @@ while True:
 
     result = face_mesh.process(rgb_image)
 
-    for facial_landmark in result.multi_face_landmarks:
-        for i in range(0, 468):
-            pt1 = facial_landmark.landmark[i]
-            x = int(pt1.x * width)
-            y = int(pt1.y * height)
+    if result.multi_face_landmarks != None:
+        for facial_landmark in result.multi_face_landmarks:
+            for i in range(0, 468):
+                pt1 = facial_landmark.landmark[i]
+                x = int(pt1.x * width)
+                y = int(pt1.y * height)
 
-            cv2.circle(image, (x, y), 2, (100, 100, 0), -1)
+                cv2.circle(image, (x, y), 2, (100, 100, 0), -1)
 
     key = cv2.waitKey(5)
 

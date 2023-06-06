@@ -8,7 +8,9 @@ import numpy as np
 class FaceLandmarks:
     def __init__(self):
         mp_face_mesh = mp.solutions.face_mesh
-        self.face_mesh = mp_face_mesh.FaceMesh()
+        self.face_mesh = mp_face_mesh.FaceMesh(
+            max_num_faces=3,
+            min_detection_confidence=0.2)
 
     def get_facial_landmarks(self, frame):
         height, width, _ = frame.shape

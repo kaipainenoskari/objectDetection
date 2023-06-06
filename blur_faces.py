@@ -1,6 +1,5 @@
 # pylint: disable-all
 import cv2
-import mediapipe as mp
 from faceLandmarks import FaceLandmarks
 import numpy as np
 
